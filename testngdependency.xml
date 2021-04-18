@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite dependency with TestNG">
+	<test name="Store Verify Account">
+		<groups>
+			<dependencies>
+				<group depends-on="openbrowser" name="login"></group>
+				<group depends-on="login" name="verifyaccount"></group>
+				<group depends-on="login" name="logout"></group>
+			</dependencies>
+		</groups>
+		<classes>
+			<class name="pe.edu.galaxy.DependyOnGroups" />
+		</classes>
+	</test>
+</suite>
